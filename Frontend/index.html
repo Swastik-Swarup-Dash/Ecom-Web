@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce Website</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1>E-Commerce Website</h1>
+   <div id="navbar-buttons"> 
+  <div id="cart">
+    <button id="login-btn" onclick="openLoginModal()">Login</button>
+    <i class="fas fa-shopping-cart"></i>
+    <span id="cart-count">0</span>
+  </div></div>
+  </header>
+
+  <!-- Login Modal -->
+  <div id="login-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeLoginModal()">&times;</span>
+      <div id="login-frame"><iframe src="login.html"></iframe></div>
+    </div>
+  </div>
+
+  <main>
+    <div class="product-list">
+      <div class="product" data-id="1">
+        <img src="./image1.jpg" alt="Product 1">
+        <h3>Headphone 1</h3>
+        <p>$1000.00</p>
+        <button onclick="addToCart(1)">Add to Cart</button>
+      </div>
+      <div class="product" data-id="2">
+        <img src="./image2.jpg" alt="Product 2">
+        <h3>Headphone 2</h3>
+        <p>$2000.00</p>
+        <button onclick="addToCart(2)">Add to Cart</button>
+      </div>
+      <div class="product" data-id="3">
+        <img src="./image3.jpg" alt="Product 3">
+        <h3>Headphone 3</h3>
+        <p>$3000.00</p>
+        <button onclick="addToCart(3)">Add to Cart</button>
+      </div>
+    </div>
+
+    <div id="cart-items" class="cart-items">
+      <h2>Your Cart</h2>
+      <div id="cart-content"></div>
+      <button id="checkout-btn" onclick="goToCheckout()">Proceed to Checkout</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
